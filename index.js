@@ -65,7 +65,11 @@ if (user1 != user2) {
 console.log(result)
 
 
+console.log('\nPress any key to exit');
 
+process.stdin.setRawMode(true);
+process.stdin.resume();
+process.stdin.on('data', process.exit.bind(process, 0));
 
 
 
